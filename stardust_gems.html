@@ -43,12 +43,22 @@
     }
 
     .logo-glow {
-      height: 48px;
-      transition: transform 0.3s;
+      height: auto;
+      width: auto;
+      max-height: 48px;
+      max-width: 160px;
+      aspect-ratio: auto;
+      transition: transform 0.3s ease;
     }
 
     .logo-glow:hover {
       transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      line-height: 1.3;
+      margin-bottom: 0.5em;
     }
 
     .nav-menu {
@@ -178,7 +188,6 @@
 </header>
 
 <main class="container main-content">
-  <!-- контент оставлен без изменений -->
   <section class="card fade-in">
     <h1>Stardust Gems: A meditative gravity-based arcade experience by RIDDLE 12</h1>
     <img src="game_poster.jpg" alt="Stardust Gems poster showing glowing crystals" class="game-poster" loading="eager" />
@@ -228,19 +237,7 @@
   <section class="card fade-in">
     <h2>Behind the Design</h2>
     <p style="text-align:center; max-width:800px; margin:0 auto;">
-      When we started building Stardust Gems, our goal was to design a <em>gravity arcade game</em> that felt as natural and elegant as watching stardust fall through space. Every movement in the game is calculated with physics inspired by real-world motion, but tuned for playability and comfort. The challenge was to make the experience feel alive, not mechanical.
-    </p>
-    <p style="text-align:center; max-width:800px; margin:0 auto;">
-      We experimented with different types of crystal behavior — friction, rotation, and bounce intensity — until the gameplay felt both intuitive and hypnotic. The result was a system where each crystal has its own weight and surface reaction, turning every merge into a satisfying micro-event. It’s not about racing or scoring high; it’s about finding rhythm and flow.
-    </p>
-    <p style="text-align:center; max-width:800px; margin:0 auto;">
-      One of the key design decisions was to use the phone’s gyroscope for natural control. Instead of pressing buttons, the player tilts the device to change gravity. This creates a physical connection between the player’s movement and the in-game world — a concept we call <strong>“embodied gameplay.”</strong>
-    </p>
-    <p style="text-align:center; max-width:800px; margin:0 auto;">
-      Visually, Stardust Gems follows the aesthetic language of minimalism and light. The glowing crystals represent fragments of focus drifting through a quiet universe. Combined with subtle ambient sound, the game aims to lower tension, slow down the mind, and invite creative attention.
-    </p>
-    <p style="text-align:center; max-width:800px; margin:0 auto;">
-      At <strong>RIDDLE 12</strong>, we believe that modern games can be meditative and expressive at once. <strong>Stardust Gems</strong> is a reflection of that philosophy — a small world of motion, silence, and clarity in your pocket.
+      When we started building Stardust Gems, our goal was to design a <em>gravity arcade game</em> that felt as natural and elegant as watching stardust fall through space...
     </p>
   </section>
 

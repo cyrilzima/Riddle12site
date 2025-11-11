@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — RIDDLE 12</title>
+  <meta name="description" content="Contact RIDDLE 12 — indie game studio from Los Angeles, creators of Stardust Gems." />
+  <meta property="og:title" content="Contact Us — RIDDLE 12" />
+  <meta property="og:description" content="Reach out to the creators of Stardust Gems and other indie titles from Los Angeles." />
+  <meta property="og:image" content="riddle12_logo.jpg" />
+  <meta name="theme-color" content="#0e0e15" />
+  <link rel="canonical" href="https://riddle12.com/contact.html" />
+  <link rel="icon" href="riddle12_logo.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0e0e15;
+      color: #eaeaea;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-content {
+      padding-top: 140px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 14px;
+      padding: 2.2rem 1.6rem;
+      box-shadow: 0 0 25px rgba(255, 215, 95, 0.1);
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .card h1, .card h2 {
+      color: #ffd75f; /* 🔹 жёлтые заголовки как на главной */
+      margin-top: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .card p {
+      color: #e6e6e6;
+      max-width: 800px;
+      margin: 0.8rem auto;
+    }
+
+    .divider {
+      color: #444;
+      font-size: 1.4rem;
+      letter-spacing: 4px;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    a { color: #ffd75f; text-decoration: none; }
+    a:hover { color: #ffe890; }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+<!-- 🌐 HEADER -->
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand" aria-label="RIDDLE 12 Home">
+      <img src="riddle12_logo.jpg" alt="RIDDLE 12 Logo" class="logo-glow" />
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link" data-page="about">About</a>
+      <a href="stardust_gems.html" class="nav-link" data-page="stardust">Stardust Gems</a>
+      <a href="policies.html" class="nav-link" data-page="policies">Policy</a>
+      <a href="contact.html" class="nav-link active" data-page="contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="container main-content fade-in">
+  <section class="card fade-in">
+    <h1>Contact Us</h1>
+    <p class="subtitle">We’d love to hear from you.</p>
+
+    <p>
+      For questions, feedback, collaborations, or press inquiries — we’re always open to connect.<br>
+      Whether it’s about <strong>Stardust Gems</strong> or upcoming RIDDLE 12 titles, we personally read every message.
+    </p>
+
+    <div class="divider">⸻</div>
+
+    <h2>Email</h2>
+    <p>
+      You can reach us directly at:<br>
+      <a href="mailto:riddle12studio@gmail.com" style="font-weight:600;">riddle12studio@gmail.com</a>
+    </p>
+
+    <p style="margin-top:2rem;">
+      RIDDLE 12 Studio<br>
+      Los Angeles, California, USA
+    </p>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <small>© 2025 RIDDLE 12. All rights reserved.</small>
+    <div class="footer-links">
+      <a href="index.html" class="footer-link">About</a> · 
+      <a href="stardust_gems.html" class="footer-link">Games</a> · 
+      <a href="contact.html" class="footer-link">Contact</a> · 
+      <a href="policies.html" class="footer-link">Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-menu a');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    menuToggle.textContent = navMenu.classList.contains('open') ? '✕' : '☰';
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      const current = window.location.pathname.split("/").pop() || "index.html";
+      if (link.getAttribute("href") === current) e.preventDefault();
+      navMenu.classList.remove('open');
+      menuToggle.textContent = '☰';
+    });
+  });
+
+  const fadeEls = document.querySelectorAll('.fade-in, .card');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.15});
+  fadeEls.forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

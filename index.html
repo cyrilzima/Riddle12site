@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RIDDLE 12 — Indie Game Studio from Los Angeles</title>
+  <meta name="description" content="RIDDLE 12 is a family-run indie game studio in Los Angeles, founded by Cyril Zima (Kirill Petrov) and Maria Rogotskaya. We create unique mobile games inspired by cinema, focus, and precision." />
+  <meta property="og:title" content="RIDDLE 12 — Indie Game Studio from Los Angeles" />
+  <meta property="og:description" content="Discover Stardust Gems — a meditative gravity-based arcade game built with love and precision." />
+  <meta property="og:image" content="riddle12_logo.jpg" />
+  <meta name="theme-color" content="#0e0e15" />
+  <link rel="canonical" href="https://riddle12.com/" />
+  <link rel="icon" href="riddle12_logo.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .card h1 {
+      margin-top: 0.4rem;
+      margin-bottom: 1rem;
+      color: #ffd75f;
+      text-align: center;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    .card:first-of-type {
+      padding-top: 1.6rem;
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="nav-container">
+    <a href="index.html" class="brand" aria-label="RIDDLE 12 Home">
+      <img src="riddle12_logo.jpg" alt="RIDDLE 12 Logo" class="logo-glow" />
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link active" data-page="about">About</a>
+      <a href="stardust_gems.html" class="nav-link" data-page="stardust">Stardust Gems</a>
+      <a href="policies.html" class="nav-link" data-page="policies">Policy</a>
+      <a href="contact.html" class="nav-link" data-page="contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container main-content">
+  <section id="about" class="card fade-in">
+    <h1>RIDDLE 12 — Indie Game Studio from Los Angeles</h1>
+    <p><strong>RIDDLE 12</strong> is a family-run indie game studio based in Los Angeles, founded by <strong>Cyril Zima (Kirill Petrov)</strong> and <strong>Maria Rogotskaya</strong>.</p>
+    <p>We create unique mobile games inspired by cinema, focus, and the quiet art of balance.</p>
+    <p>Every game we make is built with love — and every line of code has a story behind it.</p>
+
+    <div class="team">
+      <div class="person">
+        <img src="cyril.jpg" alt="Cyril Zima" class="portrait" />
+        <h3>Cyril Zima</h3>
+        <p>Developer · Game Designer</p>
+      </div>
+      <div class="person">
+        <img src="maria.jpg" alt="Maria Rogotskaya" class="portrait" />
+        <h3>Maria Rogotskaya</h3>
+        <p>Producer · Art Director</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider">⸻</div>
+
+  <section id="philosophy" class="card fade-in">
+    <h2>From Archery to Code: Our Philosophy</h2>
+    <p>We are professional archery coaches and independent mobile game developers. And we know one simple truth: a perfect shot is not magic — it’s debugging.</p>
+    <p>When we teach, we observe hundreds of details — stance, joint angles, breathing, eye movement. Sometimes adjusting a single knee makes the arrow fly straight to the target. It’s the most complex debugging process imaginable — done without a single line of code.</p>
+    <p>We carried that philosophy into game development: balance, precision, and attention to feeling — giving the player that same moment of perfect alignment, that satisfying hit.</p>
+  </section>
+
+  <div class="divider">⸻</div>
+
+  <section id="story" class="card fade-in">
+    <h2>From the Big Screen to the App Store</h2>
+    <p>Our story began in 2011 at a TV channel in a snowy country far away, where Kirill was a journalist and Maria a producer. We got married, left television, and started our own production company — shooting commercials and short films that toured international festivals and eventually brought us to Los Angeles.</p>
+    <p>When the 2020 pandemic froze the film industry, we turned our passion for archery into one of LA’s most popular schools. Later we discovered the world of coding and game design, and found that creating games can be just as meditative and inspiring as drawing a bowstring.</p>
+  </section>
+
+  <div class="divider">⸻</div>
+
+  <section id="today" class="card fade-in">
+    <h2>Today and Beyond</h2>
+    <p>Today <strong>RIDDLE 12</strong> is a young but ambitious indie studio in Los Angeles, where every project begins with curiosity, precision, and the joy of creation. Our first mobile game is complete — and many more are on the way.</p>
+    <p>We build indie games that evoke real emotion, reward focus, and draw players into worlds that feel alive.</p>
+  </section>
+
+  <section id="stardust" class="promo fade-in">
+    <div class="promo-text">
+      <h2>Discover Our First Title</h2>
+      <p><strong>Stardust Gems</strong> — a meditative gravity-based arcade experience available on the App Store.</p>
+    </div>
+
+    <a href="stardust_gems.html" class="poster-link">
+      <img src="game_poster.jpg" alt="Stardust Gems Poster" class="game-poster" />
+    </a>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <small>© 2025 RIDDLE 12. All rights reserved.</small>
+    <div class="footer-links">
+      <a href="index.html" class="footer-link">About</a> · 
+      <a href="stardust_gems.html" class="footer-link">Games</a> · 
+      <a href="contact.html" class="footer-link">Contact</a> · 
+      <a href="policies.html" class="footer-link">Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-menu a');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    menuToggle.textContent = navMenu.classList.contains('open') ? '✕' : '☰';
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      const current = window.location.pathname.split("/").pop() || "index.html";
+      if (link.getAttribute("href") === current) e.preventDefault();
+      navMenu.classList.remove('open');
+      menuToggle.textContent = '☰';
+    });
+  });
+
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, {threshold: 0.15});
+  fadeEls.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>

@@ -5,129 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stardust Gems — Gravity Arcade Game by RIDDLE 12</title>
   <meta name="description" content="Play Stardust Gems — a relaxing gravity-based arcade puzzle by RIDDLE 12. Merge crystals, control gravity, and master your focus." />
-  <meta name="keywords" content="Stardust Gems, RIDDLE 12, merge game, gravity puzzle, relaxing mobile game, physics game, gyroscope control, indie game Los Angeles, merge two, iPhone arcade" />
-  <meta name="author" content="RIDDLE 12 Studio" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Stardust Gems — Gravity Arcade by RIDDLE 12" />
+  <meta property="og:title" content="Stardust Gems — Gravity Arcade Game by RIDDLE 12" />
   <meta property="og:description" content="Merge crystals, master gravity, and relax with Stardust Gems — a meditative indie game for iPhone." />
-  <meta property="og:image" content="https://riddle12.com/game_poster.jpg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://riddle12.com/stardust_gems.html" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Stardust Gems — Gravity Arcade by RIDDLE 12" />
-  <meta name="twitter:description" content="Merge crystals and master gravity in this relaxing physics-based puzzle from RIDDLE 12." />
-  <meta name="twitter:image" content="https://riddle12.com/game_poster.jpg" />
+  <meta property="og:image" content="riddle12_logo.jpg" />
   <meta name="theme-color" content="#0e0e15" />
-  <link rel="icon" href="riddle12_logo.jpg" type="image/jpeg" />
   <link rel="canonical" href="https://riddle12.com/stardust_gems.html" />
+  <link rel="icon" href="riddle12_logo.jpg" type="image/jpeg" />
   <link rel="stylesheet" href="styles.css" />
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #0e0e15;
-      color: #eaeaea;
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, sans-serif;
+    .card h1 {
+      margin-top: 0.4rem;
+      margin-bottom: 1rem;
+      color: #ffd75f;
       text-align: center;
-      overflow-x: hidden;
-    }
-
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0.8em 1.2em;
-    }
-
-    .logo-glow {
-      height: auto;
-      width: auto;
-      max-height: 48px;
-      max-width: 160px;
-      aspect-ratio: auto;
-      transition: transform 0.3s ease;
-    }
-
-    .logo-glow:hover {
-      transform: scale(1.05);
-    }
-
-    h1 {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       line-height: 1.3;
-      margin-bottom: 0.5em;
     }
-
-    .nav-menu {
-      display: flex;
-      gap: 1.2em;
-    }
-
-    .nav-link {
-      color: #eaeaea;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-      color: #66c5ff;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.8em;
-      color: #eaeaea;
-      cursor: pointer;
-    }
-
-    @media (max-width: 720px) {
-      .menu-toggle {
-        display: block;
-      }
-      .nav-menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 65px;
-        right: 20px;
-        background: rgba(15,15,25,0.95);
-        backdrop-filter: blur(8px);
-        border-radius: 12px;
-        padding: 1em 1.2em;
-        max-width: 180px;
-        text-align: right;
-        animation: slideInLink 0.3s ease;
-      }
-      .nav-menu.open {
-        display: flex;
-      }
-    }
-
-    .container.main-content {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2em 1.2em;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.03);
-      border-radius: 12px;
-      padding: 2em 1.5em;
-      margin-bottom: 3em;
-      box-shadow: 0 0 12px rgba(255,255,255,0.05);
+    .card:first-of-type {
+      padding-top: 1.6rem;
     }
 
     .game-poster {
-      width: 100%;
+      width: 80%;
+      max-width: 640px;
       height: auto;
-      max-width: 780px;
       border-radius: 12px;
       margin: 1em auto;
       display: block;
@@ -138,36 +40,13 @@
       opacity: 0.4;
     }
 
-    .footer {
-      background: rgba(255,255,255,0.03);
-      text-align: center;
-      padding: 1.5em 1em;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin-top: 3em;
+    .fade-in {
+      opacity: 0;
+      transition: opacity 1s ease;
     }
-
-    .footer-links {
-      margin-top: 0.5em;
-      color: #aaa;
+    .fade-in.visible {
+      opacity: 1;
     }
-
-    .footer-link {
-      color: #aaa;
-      text-decoration: none;
-      margin: 0 0.3em;
-    }
-
-    .footer-link:hover {
-      color: #66c5ff;
-    }
-
-    @keyframes slideInLink {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .fade-in { opacity: 0; transition: opacity 1s ease; }
-    .fade-in.visible { opacity: 1; }
   </style>
 </head>
 
@@ -177,7 +56,9 @@
     <a href="index.html" class="brand" aria-label="RIDDLE 12 Home">
       <img src="riddle12_logo.jpg" alt="RIDDLE 12 Logo" class="logo-glow" />
     </a>
+
     <button class="menu-toggle" aria-label="Open menu">☰</button>
+
     <nav class="nav-menu">
       <a href="index.html" class="nav-link" data-page="about">About</a>
       <a href="stardust_gems.html" class="nav-link active" data-page="stardust">Stardust Gems</a>
@@ -237,7 +118,19 @@
   <section class="card fade-in">
     <h2>Behind the Design</h2>
     <p style="text-align:center; max-width:800px; margin:0 auto;">
-      When we started building Stardust Gems, our goal was to design a <em>gravity arcade game</em> that felt as natural and elegant as watching stardust fall through space...
+      When we started building <strong>Stardust Gems</strong>, our goal was to design a <em>gravity arcade game</em> that felt as natural and elegant as watching stardust fall through space. Every movement in the game is calculated with physics inspired by real-world motion, but tuned for playability and comfort.
+    </p>
+    <p style="text-align:center; max-width:800px; margin:0 auto;">
+      We experimented with different types of crystal behavior — friction, rotation, and bounce intensity — until the gameplay felt both intuitive and hypnotic. The result was a system where each crystal has its own weight and surface reaction, turning every merge into a satisfying micro-event. It’s not about racing or scoring high; it’s about finding rhythm and flow.
+    </p>
+    <p style="text-align:center; max-width:800px; margin:0 auto;">
+      One of the key design decisions was to use the phone’s gyroscope for natural control. Instead of pressing buttons, the player tilts the device to change gravity. This creates a physical connection between the player’s movement and the in-game world — a concept we call <strong>“embodied gameplay.”</strong>
+    </p>
+    <p style="text-align:center; max-width:800px; margin:0 auto;">
+      Visually, <strong>Stardust Gems</strong> follows the aesthetic language of minimalism and light. The glowing crystals represent fragments of focus drifting through a quiet universe. Combined with subtle ambient sound, the game aims to lower tension, slow down the mind, and invite creative attention.
+    </p>
+    <p style="text-align:center; max-width:800px; margin:0 auto;">
+      At <strong>RIDDLE 12</strong>, we believe that modern games can be meditative and expressive at once. <strong>Stardust Gems</strong> is a reflection of that philosophy — a small world of motion, silence, and clarity in your pocket.
     </p>
   </section>
 
@@ -296,6 +189,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }, {threshold: 0.15});
   fadeEls.forEach(el => observer.observe(el));
 });
+</script>
+
+</body>
+</html>
 </script>
 </body>
 </html>

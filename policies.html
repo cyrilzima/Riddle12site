@@ -209,13 +209,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const fadeEls = document.querySelectorAll(".fade-in, .card");
-  const fadeEls = document.querySelectorAll('.fade-in, .card');
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, {threshold: 0.15});
-  fadeEls.forEach(el => observer.observe(el));
-});
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add("visible");
+      // можно даже перестать наблюдать за уже показанным элементом
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0 }); // 👈 главный фикс
 </script>
 </body>
 </html>

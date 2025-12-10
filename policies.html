@@ -91,7 +91,7 @@
   </div>
 </header>
 
-<main class="container main-content">
+<main class="container main-content fade-in">
   <section class="card fade-in">
     <h1>Privacy Policy for Stardust Gems</h1>
     <p class="subtitle">Effective Date: December 4, 2025</p>
@@ -209,15 +209,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const fadeEls = document.querySelectorAll(".fade-in, .card");
   const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add("visible");
-      // можно даже перестать наблюдать за уже показанным элементом
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0 }); // 👈 главный фикс
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+  }, { threshold: 0.15 });
+  fadeEls.forEach(el => observer.observe(el));
+});
 </script>
 </body>
 </html>
